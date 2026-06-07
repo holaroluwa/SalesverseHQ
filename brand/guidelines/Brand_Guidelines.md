@@ -296,7 +296,7 @@ Division names use the same font weight (800) but in `#888888` (grey) to disting
 ## Email Signature
 
 ```
-Ola Odusanya
+Olaoluwa Odusanya
 Founder — Saleverse
 salesversehq.com
 

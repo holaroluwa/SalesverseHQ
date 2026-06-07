@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" fill="none">
+  <defs>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#E8E8E8;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#A0A0A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Dark background -->
+  <rect width="800" height="280" fill="#0a0a0a" rx="0"/>
+  <!-- S icon - scaled down -->
+  <g transform="translate(40, 30) scale(0.43)">
+    <path d="M320 140 C320 110, 290 85, 256 85 C210 85, 175 115, 175 155 C175 195, 205 215, 256 235 C307 255, 337 275, 337 315 C337 355, 302 385, 256 385 C222 385, 192 360, 192 330"
+          stroke="url(#metal)" stroke-width="36" stroke-linecap="round" fill="none"/>
+    <line x1="310" y1="130" x2="380" y2="100" stroke="url(#metal)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="380" cy="100" r="5" fill="#E0E0E0"/>
+    <line x1="320" y1="115" x2="400" y2="80" stroke="url(#metal)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="400" cy="80" r="4" fill="#C0C0C0"/>
+    <line x1="330" y1="145" x2="395" y2="130" stroke="url(#metal)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="395" cy="130" r="4" fill="#C0C0C0"/>
+    <line x1="325" y1="160" x2="410" y2="155" stroke="url(#metal)" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="410" cy="155" r="3.5" fill="#B0B0B0"/>
+    <line x1="202" y1="340" x2="132" y2="370" stroke="url(#metal)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="132" cy="370" r="5" fill="#E0E0E0"/>
+    <line x1="192" y1="355" x2="112" y2="390" stroke="url(#metal)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="112" cy="390" r="4" fill="#C0C0C0"/>
+    <line x1="182" y1="325" x2="117" y2="340" stroke="url(#metal)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="117" cy="340" r="4" fill="#C0C0C0"/>
+    <circle cx="256" cy="235" r="4" fill="#E8E8E8"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="260" y="155" font-family="Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="52" font-weight="800" letter-spacing="-1" fill="#F0F0F0">Salesverse</text>
+  <text x="655" y="155" font-family="Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="52" font-weight="800" letter-spacing="-1" fill="#666666">HQ</text>
+  <!-- Tagline -->
+  <text x="262" y="190" font-family="Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="3" fill="#555555" text-transform="uppercase">THE UNGLAMOROUS TRUTH ABOUT B2B SALES</text>
+</svg>

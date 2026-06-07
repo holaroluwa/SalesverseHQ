@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1280px; height: 720px; overflow: hidden; }
+.thumb {
+    width: 1280px; height: 720px;
+    background: #0a0a0a;
+    display: flex; align-items: center;
+    padding: 60px 80px;
+    font-family: 'Inter', sans-serif;
+    position: relative; overflow: hidden;
+}
+.thumb::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.content { z-index: 1; flex: 1; }
+.topic-label {
+    font-size: 16px; font-weight: 700; color: #555;
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 16px;
+}
+h1 {
+    font-size: 64px; font-weight: 900; color: #f0f0f0;
+    letter-spacing: -3px; line-height: 1.05;
+    max-width: 700px;
+}
+h1 em {
+    font-style: normal; color: #666;
+}
+.brand-footer {
+    position: absolute; bottom: 40px; left: 80px;
+    display: flex; align-items: center; gap: 12px;
+}
+.brand-footer .s-mark {
+    font-size: 24px; font-weight: 800; color: #C0C0C0;
+}
+.brand-footer .brand-text {
+    font-size: 14px; font-weight: 600; color: #444;
+    letter-spacing: 1px;
+}
+.icon-bg {
+    position: absolute; right: -40px; top: 50%; transform: translateY(-50%);
+    opacity: 0.06; z-index: 0;
+}
+.accent-line {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(180deg, transparent, #555, #888, #555, transparent);
+}
+</style>
+</head>
+<body>
+<div class="thumb">
+    <div class="accent-line"></div>
+    <div class="content">
+        <div class="topic-label">B2B SALES</div>
+        <h1>I sent 105 cold emails. <em>Here's what happened.</em></h1>
+    </div>
+    <div class="icon-bg">
+        <svg viewBox="0 0 512 512" fill="none" width="500" height="500">
+            <path d="M320 140 C320 110, 290 85, 256 85 C210 85, 175 115, 175 155 C175 195, 205 215, 256 235 C307 255, 337 275, 337 315 C337 355, 302 385, 256 385 C222 385, 192 360, 192 330"
+                  stroke="#C0C0C0" stroke-width="36" stroke-linecap="round"/>
+            <line x1="310" y1="130" x2="380" y2="100" stroke="#C0C0C0" stroke-width="3"/>
+            <circle cx="380" cy="100" r="5" fill="#C0C0C0"/>
+            <line x1="202" y1="340" x2="132" y2="370" stroke="#C0C0C0" stroke-width="3"/>
+            <circle cx="132" cy="370" r="5" fill="#C0C0C0"/>
+        </svg>
+    </div>
+    <div class="brand-footer">
+        <span class="s-mark">S</span>
+        <span class="brand-text">SALEVERSE</span>
+    </div>
+</div>
+</body></html>

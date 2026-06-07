@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#E8E8E8;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#A0A0A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="metalDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#555;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#888;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#0a0a0a"/>
+  <!-- S shape - main body -->
+  <path d="M320 140 C320 110, 290 85, 256 85 C210 85, 175 115, 175 155 C175 195, 205 215, 256 235 C307 255, 337 275, 337 315 C337 355, 302 385, 256 385 C222 385, 192 360, 192 330"
+        stroke="url(#metal)" stroke-width="36" stroke-linecap="round" fill="none"/>
+  <!-- Circuit traces - top right -->
+  <line x1="310" y1="130" x2="380" y2="100" stroke="url(#metal)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="380" cy="100" r="5" fill="#E0E0E0"/>
+  <line x1="320" y1="115" x2="400" y2="80" stroke="url(#metal)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="400" cy="80" r="4" fill="#C0C0C0"/>
+  <line x1="330" y1="145" x2="395" y2="130" stroke="url(#metal)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="395" cy="130" r="4" fill="#C0C0C0"/>
+  <line x1="325" y1="160" x2="410" y2="155" stroke="url(#metal)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="410" cy="155" r="3.5" fill="#B0B0B0"/>
+  <line x1="315" y1="100" x2="365" y2="65" stroke="url(#metal)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="365" cy="65" r="3.5" fill="#B0B0B0"/>
+  <!-- Circuit traces - bottom left -->
+  <line x1="202" y1="340" x2="132" y2="370" stroke="url(#metal)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="132" cy="370" r="5" fill="#E0E0E0"/>
+  <line x1="192" y1="355" x2="112" y2="390" stroke="url(#metal)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="112" cy="390" r="4" fill="#C0C0C0"/>
+  <line x1="182" y1="325" x2="117" y2="340" stroke="url(#metal)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="117" cy="340" r="4" fill="#C0C0C0"/>
+  <line x1="187" y1="310" x2="102" y2="315" stroke="url(#metal)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="102" cy="315" r="3.5" fill="#B0B0B0"/>
+  <line x1="197" y1="370" x2="147" y2="405" stroke="url(#metal)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="147" cy="405" r="3.5" fill="#B0B0B0"/>
+  <!-- Circuit node accents on S -->
+  <circle cx="256" cy="235" r="4" fill="#E8E8E8"/>
+  <circle cx="230" cy="175" r="3" fill="#D0D0D0"/>
+  <circle cx="280" cy="295" r="3" fill="#D0D0D0"/>
+</svg>

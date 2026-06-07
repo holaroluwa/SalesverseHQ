@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1080px; overflow: hidden; }
+.card {
+    width: 1080px; height: 1080px;
+    background: #0a0a0a;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    padding: 100px;
+    font-family: 'Inter', sans-serif;
+    position: relative; overflow: hidden;
+    text-align: center;
+}
+.card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.quote-mark {
+    font-size: 120px; font-weight: 800; color: #222;
+    line-height: 0.6; margin-bottom: 20px; z-index: 1;
+}
+.quote {
+    font-size: 38px; font-weight: 700; color: #f0f0f0;
+    line-height: 1.35; letter-spacing: -1px;
+    max-width: 800px; z-index: 1;
+}
+.author {
+    margin-top: 40px; z-index: 1;
+}
+.author-name {
+    font-size: 16px; font-weight: 600; color: #888;
+}
+.author-title {
+    font-size: 13px; color: #555; margin-top: 4px;
+}
+.brand {
+    position: absolute; bottom: 50px;
+    font-size: 14px; font-weight: 700; color: #333;
+    letter-spacing: 2px;
+}
+.line-top {
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent, #333, #666, #333, transparent);
+}
+.line-bottom {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent, #333, #666, #333, transparent);
+}
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="line-top"></div>
+    <div class="quote-mark">"</div>
+    <div class="quote">Sales is not manipulation. Sales is communication. Sales is helping people make decisions.</div>
+    <div class="author">
+        <div class="author-name">Ola Odusanya</div>
+        <div class="author-title">Founder — Saleverse</div>
+    </div>
+    <div class="brand">SALEVERSE</div>
+    <div class="line-bottom"></div>
+</div>
+</body></html>

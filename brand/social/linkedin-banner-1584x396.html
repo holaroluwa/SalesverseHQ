@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1584px; height: 396px; overflow: hidden; }
+.banner {
+    width: 1584px; height: 396px;
+    background: #0a0a0a;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Inter', sans-serif;
+    position: relative; overflow: hidden;
+    text-align: center;
+}
+.banner::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+.content { z-index: 1; }
+.brand-name {
+    font-size: 64px; font-weight: 800; letter-spacing: -2.5px;
+    color: #f0f0f0;
+}
+.brand-name span { color: #555; }
+.tagline {
+    font-size: 16px; font-weight: 500; color: #555;
+    margin-top: 8px;
+}
+.pillars {
+    display: flex; gap: 32px; margin-top: 20px; justify-content: center;
+}
+.pillar {
+    font-size: 12px; font-weight: 600; color: #777;
+    letter-spacing: 3px; text-transform: uppercase;
+}
+.pillar-dot { color: #333; margin: 0 0; }
+.line {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, #222, #555, #888, #555, #222, transparent);
+}
+/* Circuit S watermark - left */
+.watermark-left {
+    position: absolute; left: -60px; top: 50%; transform: translateY(-50%); opacity: 0.06;
+}
+.watermark-right {
+    position: absolute; right: -60px; top: 50%; transform: translateY(-50%); opacity: 0.06;
+}
+</style>
+</head>
+<body>
+<div class="banner">
+    <div class="watermark-left">
+        <svg width="320" height="320" viewBox="0 0 512 512" fill="none">
+            <path d="M320 140 C320 110, 290 85, 256 85 C210 85, 175 115, 175 155 C175 195, 205 215, 256 235 C307 255, 337 275, 337 315 C337 355, 302 385, 256 385 C222 385, 192 360, 192 330"
+                  stroke="#C0C0C0" stroke-width="36" stroke-linecap="round"/>
+            <line x1="310" y1="130" x2="380" y2="100" stroke="#C0C0C0" stroke-width="3"/>
+            <circle cx="380" cy="100" r="5" fill="#C0C0C0"/>
+            <line x1="202" y1="340" x2="132" y2="370" stroke="#C0C0C0" stroke-width="3"/>
+            <circle cx="132" cy="370" r="5" fill="#C0C0C0"/>
+        </svg>
+    </div>
+    <div class="content">
+        <div class="brand-name">Saleverse<span>HQ</span></div>
+        <div class="tagline">The unglamorous truth about B2B sales.</div>
+        <div class="pillars">
+            <span class="pillar">Sales</span>
+            <span class="pillar-dot">/</span>
+            <span class="pillar">Technology</span>
+            <span class="pillar-dot">/</span>
+            <span class="pillar">AI</span>
+            <span class="pillar-dot">/</span>
+            <span class="pillar">GTM</span>
+        </div>
+    </div>
+    <div class="watermark-right">
+        <svg width="320" height="320" viewBox="0 0 512 512" fill="none" style="transform: scaleX(-1);">
+            <path d="M320 140 C320 110, 290 85, 256 85 C210 85, 175 115, 175 155 C175 195, 205 215, 256 235 C307 255, 337 275, 337 315 C337 355, 302 385, 256 385 C222 385, 192 360, 192 330"
+                  stroke="#C0C0C0" stroke-width="36" stroke-linecap="round"/>
+            <line x1="310" y1="130" x2="380" y2="100" stroke="#C0C0C0" stroke-width="3"/>
+            <circle cx="380" cy="100" r="5" fill="#C0C0C0"/>
+            <line x1="202" y1="340" x2="132" y2="370" stroke="#C0C0C0" stroke-width="3"/>
+            <circle cx="132" cy="370" r="5" fill="#C0C0C0"/>
+        </svg>
+    </div>
+    <div class="line"></div>
+</div>
+</body></html>

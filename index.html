@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalesverseHQ — GTM Systems for Founders Who Sell</title>
+    <meta name="description" content="Stop guessing at outbound. Get a proven GTM system — or let us build one for you in 48 hours.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #111111;
+            --surface-2: #1a1a1a;
+            --border: #222222;
+            --text: #f5f5f5;
+            --text-secondary: #999999;
+            --accent: #ff6b2b;
+            --accent-hover: #ff8a55;
+            --accent-glow: rgba(255, 107, 43, 0.15);
+            --green: #22c55e;
+            --blue: #3b82f6;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Nav */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 16px 24px;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: -0.5px;
+        }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            background: var(--accent) !important;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: background 0.2s !important;
+        }
+        .nav-cta:hover { background: var(--accent-hover) !important; }
+
+        /* Hero */
+        .hero {
+            padding: 160px 24px 100px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--accent-glow);
+            border: 1px solid rgba(255, 107, 43, 0.3);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(255, 107, 43, 0.2);
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            box-shadow: 0 0 40px rgba(255, 107, 43, 0.3);
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background: var(--surface-2);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover {
+            background: #222;
+            border-color: #333;
+            transform: translateY(-1px);
+        }
+
+        /* Social Proof */
+        .proof {
+            text-align: center;
+            padding: 40px 24px 80px;
+        }
+        .proof p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        .proof-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .proof-stat .number {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text);
+        }
+        .proof-stat .label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Section */
+        section {
+            padding: 80px 24px;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+        .section-tag {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .section-header h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+        .section-header p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Product Card — The Kit */
+        #kit { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .kit-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .kit-contents { list-style: none; }
+        .kit-contents li {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .kit-contents li:last-child { border-bottom: none; }
+        .kit-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--accent-glow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: var(--accent);
+            font-size: 11px;
+        }
+        .kit-contents .item-title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+        .kit-contents .item-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .kit-cta {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+        }
+        .kit-cta .price {
+            font-size: 48px;
+            font-weight: 800;
+            margin: 16px 0 8px;
+        }
+        .kit-cta .price-note {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+        .kit-cta .price-note s { color: #555; }
+
+        /* Service Section */
+        #service { background: var(--bg); }
+        .service-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            position: relative;
+            transition: border-color 0.3s;
+        }
+        .service-card:hover { border-color: #333; }
+        .service-card.featured {
+            border-color: var(--accent);
+            box-shadow: 0 0 40px rgba(255, 107, 43, 0.08);
+        }
+        .service-card .popular {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 100px;
+            letter-spacing: 0.5px;
+        }
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .service-card .service-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .service-card .service-price {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        .service-card .service-price-note {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+        .service-features {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+        .service-features li {
+            padding: 8px 0;
+            font-size: 14px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .service-features .check { color: var(--green); font-size: 16px; }
+
+        /* How It Works */
+        #how { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .steps {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .step {
+            text-align: center;
+            padding: 24px;
+        }
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-glow);
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--accent);
+            margin: 0 auto 16px;
+        }
+        .step h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+        .step p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+        /* About */
+        #about { background: var(--bg); }
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .about-avatar {
+            width: 80px;
+            height: 80px;
+            background: var(--surface-2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--accent);
+            flex-shrink: 0;
+            border: 2px solid var(--border);
+        }
+        .about-text h3 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+        .about-text .about-role { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+        .about-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px; }
+        .about-links { display: flex; gap: 16px; margin-top: 16px; }
+        .about-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .about-links a:hover { color: var(--accent); }
+
+        /* CTA */
+        .final-cta {
+            padding: 100px 24px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
+            border-top: 1px solid var(--border);
+        }
+        .final-cta h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+        .final-cta p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto 32px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+        footer p {
+            font-size: 13px;
+            color: #555;
+        }
+        footer a { color: var(--text-secondary); text-decoration: none; }
+        footer a:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .kit-grid { grid-template-columns: 1fr; gap: 40px; }
+            .service-grid { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: 1fr; gap: 16px; }
+            .about-content { flex-direction: column; align-items: center; text-align: center; }
+            .about-links { justify-content: center; }
+            .nav-links { display: none; }
+            .proof-stats { gap: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+    <div class="nav-logo">Salesverse<span>HQ</span></div>
+    <div class="nav-links">
+        <a href="#kit">Starter Kit</a>
+        <a href="#service">Done-For-You</a>
+        <a href="#about">About</a>
+        <a href="#kit" class="nav-cta">Get the Kit</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <div class="hero-badge">BUILT BY A GTM OPERATOR, NOT A GURU</div>
+    <h1>Stop guessing at outbound.<br><em>Get a system that sells.</em></h1>
+    <p>A complete cold outbound system — ICP research, email sequences, CRM, pipeline tracker — ready to launch in 48 hours. Buy the kit or let us build yours.</p>
+    <div class="hero-buttons">
+        <a href="#kit" class="btn btn-primary">Get the GTM Starter Kit — £49</a>
+        <a href="#service" class="btn btn-secondary">Done-For-You →</a>
+    </div>
+</div>
+
+<!-- Social Proof -->
+<div class="proof">
+    <p>Built from real outbound campaigns, not theory</p>
+    <div class="proof-stats">
+        <div class="proof-stat">
+            <div class="number">100+</div>
+            <div class="label">Accounts in pipeline</div>
+        </div>
+        <div class="proof-stat">
+            <div class="number">105</div>
+            <div class="label">Emails written</div>
+        </div>
+        <div class="proof-stat">
+            <div class="number">5-Touch</div>
+            <div class="label">Proven sequence</div>
+        </div>
+        <div class="proof-stat">
+            <div class="number">48hr</div>
+            <div class="label">Delivery time</div>
+        </div>
+    </div>
+</div>
+
+<!-- The Kit -->
+<section id="kit">
+    <div class="section-header">
+        <div class="section-tag">DIGITAL PRODUCT</div>
+        <h2>The GTM Starter Kit</h2>
+        <p>Everything you need to launch B2B cold outbound from zero. No fluff, no 47-module course — just the system.</p>
+    </div>
+    <div class="kit-grid">
+        <ul class="kit-contents">
+            <li>
+                <div class="kit-icon">✓</div>
+                <div>
+                    <div class="item-title">B2B Outbound Playbook</div>
+                    <div class="item-desc">12-section guide: ICP segmentation, pain signals, personalisation stack, voice rules, objection handling, 30-day execution plan</div>
+                </div>
+            </li>
+            <li>
+                <div class="kit-icon">✓</div>
+                <div>
+                    <div class="item-title">5-Touch Email Sequence Templates</div>
+                    <div class="item-desc">Cold open, value proof, angle flip, insight drop, breakup email — fill-in-the-blank templates for 5 ICP segments</div>
+                </div>
+            </li>
+            <li>
+                <div class="kit-icon">✓</div>
+                <div>
+                    <div class="item-title">ICP Segmentation Framework</div>
+                    <div class="item-desc">3-tier prioritisation system so you target the right companies first — with scoring criteria</div>
+                </div>
+            </li>
+            <li>
+                <div class="kit-icon">✓</div>
+                <div>
+                    <div class="item-title">Pipeline CRM Template</div>
+                    <div class="item-desc">Dark-mode, browser-based CRM. Track 100+ accounts, deal stages, contacts, and notes — no subscription required</div>
+                </div>
+            </li>
+            <li>
+                <div class="kit-icon">✓</div>
+                <div>
+                    <div class="item-title">Outreach Tracker Spreadsheet</div>
+                    <div class="item-desc">Pre-formatted tracker with company tiers, contact info, sequence dates, and send status — ready to use day one</div>
+                </div>
+            </li>
+            <li>
+                <div class="kit-icon">✓</div>
+                <div>
+                    <div class="item-title">Subject Line Rulebook</div>
+                    <div class="item-desc">The exact rules that get cold emails opened: word count, casing, company name placement, touch-specific formulas</div>
+                </div>
+            </li>
+        </ul>
+        <div class="kit-cta">
+            <div class="section-tag">LAUNCH PRICE</div>
+            <div class="price">£49</div>
+            <div class="price-note"><s>£79</s> — introductory price</div>
+            <a href="#" class="btn btn-primary" id="buy-kit-btn" style="width: 100%; justify-content: center;">Get the Kit Now</a>
+            <p style="font-size: 13px; color: var(--text-secondary); margin-top: 16px;">Instant download · Lifetime access · Free updates</p>
+        </div>
+    </div>
+</section>
+
+<!-- Done-For-You Service -->
+<section id="service">
+    <div class="section-header">
+        <div class="section-tag">DONE-FOR-YOU</div>
+        <h2>We Build Your Outbound System</h2>
+        <p>Don't want to DIY? We'll research your ICP, write your sequences, build your CRM, and hand you a ready-to-send pipeline in 48 hours.</p>
+    </div>
+    <div class="service-grid">
+        <!-- Starter -->
+        <div class="service-card">
+            <h3>Pipeline Build</h3>
+            <p class="service-desc">Your complete outbound system, built and delivered in 48 hours. You send the emails.</p>
+            <div class="service-price">£750</div>
+            <div class="service-price-note">One-time delivery</div>
+            <ul class="service-features">
+                <li><span class="check">✓</span> ICP research &amp; segmentation</li>
+                <li><span class="check">✓</span> 20 target companies identified</li>
+                <li><span class="check">✓</span> 5-touch email sequences (100 emails)</li>
+                <li><span class="check">✓</span> Custom CRM with your pipeline</li>
+                <li><span class="check">✓</span> Outreach tracker &amp; playbook</li>
+                <li><span class="check">✓</span> LinkedIn message templates</li>
+                <li><span class="check">✓</span> 30-minute walkthrough call</li>
+            </ul>
+            <a href="#" class="btn btn-secondary" id="book-starter" style="width: 100%; justify-content: center;">Book a Call</a>
+        </div>
+        <!-- Growth -->
+        <div class="service-card featured">
+            <div class="popular">MOST POPULAR</div>
+            <h3>Pipeline Build + Run</h3>
+            <p class="service-desc">We build it AND run it. 30 days of managed outbound — you just take the meetings.</p>
+            <div class="service-price">£2,500<span style="font-size: 16px; font-weight: 400; color: var(--text-secondary);">/mo</span></div>
+            <div class="service-price-note">Month-to-month · Cancel anytime</div>
+            <ul class="service-features">
+                <li><span class="check">✓</span> Everything in Pipeline Build</li>
+                <li><span class="check">✓</span> 50 target companies per month</li>
+                <li><span class="check">✓</span> We send all emails on your behalf</li>
+                <li><span class="check">✓</span> Reply handling &amp; meeting booking</li>
+                <li><span class="check">✓</span> Weekly performance reports</li>
+                <li><span class="check">✓</span> Sequence optimization &amp; A/B testing</li>
+                <li><span class="check">✓</span> Dedicated Slack channel</li>
+            </ul>
+            <a href="#" class="btn btn-primary" id="book-growth" style="width: 100%; justify-content: center;">Book a Call</a>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section id="how">
+    <div class="section-header">
+        <div class="section-tag">HOW IT WORKS</div>
+        <h2>Live in 48 Hours</h2>
+        <p>Whether you buy the kit or go done-for-you, the process is simple.</p>
+    </div>
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Tell Us Who You Sell To</h3>
+            <p>15-minute intake call. We learn your product, market, and who your best customers are.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>We Build the System</h3>
+            <p>ICP research, company targeting, email sequences, CRM setup, tracker — all done in 48 hours.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>You Start Selling</h3>
+            <p>Open the spreadsheet, copy the first email, hit send. Your pipeline is live.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <div class="section-header">
+        <div class="section-tag">WHO BUILT THIS</div>
+        <h2>Not a Course. Not a Guru. A System.</h2>
+    </div>
+    <div class="about-content">
+        <div class="about-avatar">O</div>
+        <div class="about-text">
+            <h3>Ola Odusanya</h3>
+            <div class="about-role">Founding GTM at MockThatInterview</div>
+            <p>I'm a GTM operator — not a coach, not an advisor, not someone who "used to sell." I'm actively running outbound right now, building pipeline from scratch, and closing deals at an early-stage startup.</p>
+            <p>This kit is the exact system I use. The same playbook, the same sequences, the same CRM. I built it because I needed it — and every founder running their own sales needs it too.</p>
+            <div class="about-links">
+                <a href="https://linkedin.com/in/olaoluwa-odusanya">LinkedIn →</a>
+                <a href="https://x.com/wealthy_ola_">@wealthy_ola_ →</a>
+                <a href="https://github.com/holaroluwa">GitHub →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<div class="final-cta">
+    <h2>Your pipeline won't build itself.</h2>
+    <p>Every day without a system is another day of guessing. Get the kit, or let us build it — either way, start selling this week.</p>
+    <div class="hero-buttons">
+        <a href="#kit" class="btn btn-primary">Get the Kit — £49</a>
+        <a href="#service" class="btn btn-secondary">Book a Call →</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>SalesverseHQ · Built by <a href="https://linkedin.com/in/olaoluwa-odusanya">Ola Odusanya</a> · <a href="https://x.com/wealthy_ola_">@wealthy_ola_</a></p>
+    <p style="margin-top: 8px;">© 2026 SalesverseHQ. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

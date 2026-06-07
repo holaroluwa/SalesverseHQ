@@ -79,7 +79,7 @@ Minimum clear space around the logo = the height of the "S" mark on all sides. N
 
 ### Philosophy
 
-Saleverse uses a **monochrome palette** — black, white, silver, and grey. No accent colour. The chrome logo is the visual anchor. This creates a premium, timeless identity that won't date.
+Saleverse uses a **monochrome palette** — black, white, silver, and grey — with **Electric Blue (#4A9EFF)** as the sole CTA accent colour. The chrome logo is the visual anchor. The monochrome base creates a premium, timeless identity; the electric blue adds energy and draws attention to calls-to-action, matching the glow of the original circuit S logo.
 
 ### Primary Colors
 
@@ -111,7 +111,17 @@ Saleverse uses a **monochrome palette** — black, white, silver, and grey. No a
 | **Error** | `#EF4444` | Errors, destructive actions |
 | **Info** | `#3B82F6` | Links, informational |
 
-**Rule:** Functional colors appear only in UI states (form validation, alerts, status badges). They never appear in marketing, branding, or content design. The brand is monochrome.
+### CTA Accent Color
+
+| Name | Hex | RGB | Use |
+|------|-----|-----|-----|
+| **Electric Blue** | `#4A9EFF` | 74, 158, 255 | CTA buttons, section labels, checkmarks, highlights |
+| **Electric Blue Hover** | `#6BB3FF` | 107, 179, 255 | Button hover states |
+| **Electric Blue Glow** | `rgba(74,158,255,0.15)` | — | Subtle glow/shadow on buttons |
+
+**Rule:** Electric Blue is used ONLY for interactive elements that drive action — buttons, links, labels, and accent highlights. It is never used for backgrounds, large surfaces, or body text. The overall brand remains monochrome with blue as the energy accent.
+
+**Rule:** Functional colors (Success, Warning, Error, Info) appear only in UI states (form validation, alerts, status badges). They do not replace Electric Blue for CTA elements.
 
 ### Background Usage
 

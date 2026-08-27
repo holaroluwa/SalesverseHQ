@@ -106,13 +106,18 @@
     </div>
   </nav>
 
-  <section class="hero-section">
-    <div class="container">
-      <p class="label">Done-For-You</p>
-      <h1 class="hero">We build your outbound system.</h1>
-      <p class="body">For when you'd rather not build the pipeline yourself. Same playbook as the kit — we do the research, write the sequences, and set up the tracking, so you're sending (or we're sending) inside days, not weeks.</p>
-      <div class="cta-row">
-        <a href="https://calendly.com/ola-mockthatinterview/30min" class="btn-primary" target="_blank" rel="noopener">Book a call</a>
+  <section class="hero-section circuit-grid-bg">
+    <div class="container hero-flex">
+      <div class="hero-copy">
+        <p class="label">Done-For-You</p>
+        <h1 class="hero">We build your outbound system.</h1>
+        <p class="body">For when you'd rather not build the pipeline yourself. Same playbook as the kit — we do the research, write the sequences, and set up the tracking, so you're sending (or we're sending) inside days, not weeks.</p>
+        <div class="cta-row">
+          <a href="https://calendly.com/ola-mockthatinterview/30min" class="btn-primary" target="_blank" rel="noopener">Book a call</a>
+        </div>
+      </div>
+      <div class="circuit-canvas-wrap">
+        <canvas id="circuit-canvas"></canvas>
       </div>
     </div>
   </section>
@@ -205,5 +210,15 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/three@0.155.0/build/three.min.js"></script>
+  <script src="assets/circuit-scene.js"></script>
+  <script>
+    (function () {
+      var canvas = document.getElementById("circuit-canvas");
+      if (canvas && window.SalesverseCircuitScene) {
+        window.SalesverseCircuitScene.init(canvas, { mode: "flow" });
+      }
+    })();
+  </script>
 </body>
 </html>

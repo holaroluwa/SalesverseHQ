@@ -88,17 +88,22 @@
     </div>
   </nav>
 
-  <section class="hero-section">
-    <div class="container">
-      <p class="label">GTM Starter Kit</p>
-      <h1 class="hero">The system behind a 104-company outbound pipeline, built from zero.</h1>
-      <p class="body">Not theory, not a course. The exact playbook, sequences, and tracking system used to build a cold outbound pipeline from zero — yours to run today.</p>
-      <div class="price-line">
-        <span class="price-amount">£49</span>
-        <span class="price-note">one-time · instant download</span>
+  <section class="hero-section circuit-grid-bg">
+    <div class="container hero-flex">
+      <div class="hero-copy">
+        <p class="label">GTM Starter Kit</p>
+        <h1 class="hero">The system behind a 104-company outbound pipeline, built from zero.</h1>
+        <p class="body">Not theory, not a course. The exact playbook, sequences, and tracking system used to build a cold outbound pipeline from zero — yours to run today.</p>
+        <div class="price-line">
+          <span class="price-amount">£49</span>
+          <span class="price-note">one-time · instant download</span>
+        </div>
+        <div class="cta-row">
+          <a href="https://selar.com/8s9g604724" class="btn-primary" target="_blank" rel="noopener">Get the Kit — £49</a>
+        </div>
       </div>
-      <div class="cta-row">
-        <a href="https://selar.com/8s9g604724" class="btn-primary" target="_blank" rel="noopener">Get the Kit — £49</a>
+      <div class="circuit-canvas-wrap">
+        <canvas id="circuit-canvas"></canvas>
       </div>
     </div>
   </section>
@@ -211,5 +216,15 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/three@0.155.0/build/three.min.js"></script>
+  <script src="assets/circuit-scene.js"></script>
+  <script>
+    (function () {
+      var canvas = document.getElementById("circuit-canvas");
+      if (canvas && window.SalesverseCircuitScene) {
+        window.SalesverseCircuitScene.init(canvas, { mode: "assemble" });
+      }
+    })();
+  </script>
 </body>
 </html>

@@ -59,14 +59,19 @@
     </div>
   </nav>
 
-  <section class="hero-section">
-    <div class="container">
-      <p class="label">SalesverseHQ</p>
-      <h1 class="hero">The unglamorous truth about B2B sales.</h1>
-      <p class="body">No hacks. No gurus. Just the systems that actually build pipeline — built by someone who's run one from zero.</p>
-      <div class="cta-row">
-        <a href="kit.html" class="btn-primary">Get the £49 GTM Kit</a>
-        <a href="service.html" class="btn-secondary">Book a call</a>
+  <section class="hero-section circuit-grid-bg">
+    <div class="container hero-flex">
+      <div class="hero-copy">
+        <p class="label">SalesverseHQ</p>
+        <h1 class="hero">The unglamorous truth about B2B sales.</h1>
+        <p class="body">No hacks. No gurus. Just the systems that actually build pipeline — built by someone who's run one from zero.</p>
+        <div class="cta-row">
+          <a href="kit.html" class="btn-primary">Get the £49 GTM Kit</a>
+          <a href="service.html" class="btn-secondary">Book a call</a>
+        </div>
+      </div>
+      <div class="circuit-canvas-wrap">
+        <canvas id="circuit-canvas"></canvas>
       </div>
     </div>
   </section>
@@ -123,5 +128,15 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/three@0.155.0/build/three.min.js"></script>
+  <script src="assets/circuit-scene.js"></script>
+  <script>
+    (function () {
+      var canvas = document.getElementById("circuit-canvas");
+      if (canvas && window.SalesverseCircuitScene) {
+        window.SalesverseCircuitScene.init(canvas, { mode: "ambient" });
+      }
+    })();
+  </script>
 </body>
 </html>

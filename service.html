@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outbound System Service | SalesverseHQ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/saleverse-icon-dark-512.png">
+  <style>
+    /* Page-level layout only — no new colors or fonts, reuses styles.css tokens/classes. */
+    .site-nav { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--secondary); text-decoration: none; font-weight: 600; font-size: 15px; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+
+    .hero-section { padding-top: 80px; padding-bottom: 64px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; align-items: center; }
+    .cta-row a { text-decoration: none; display: inline-block; }
+
+    .tiers-section { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
+    .tiers-section .section-header { margin-bottom: 8px; }
+    .tiers-section > .container > .body { margin-top: 8px; }
+    .tiers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 40px; }
+    .tier-card {
+      background: var(--surface-raised);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+    }
+    .tier-card.featured { border-color: var(--border-active); position: relative; }
+    .tier-card .popular-tag {
+      position: absolute;
+      top: -12px;
+      left: 32px;
+      background: var(--void);
+      color: var(--electric-blue);
+      border: 1px solid var(--electric-blue);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+    .tier-card .sub-header { margin: 0 0 8px; }
+    .tier-card .tier-desc { margin: 0 0 20px; }
+    .tier-price { display: flex; align-items: baseline; gap: 6px; }
+    .tier-price .price-amount { font-size: 40px; font-weight: 800; letter-spacing: -1px; color: var(--white); }
+    .tier-price .price-unit { font-size: 16px; font-weight: 400; color: var(--secondary); }
+    .tier-price-note { color: var(--muted); font-size: 13px; margin: 6px 0 24px; }
+    .tier-includes { list-style: none; padding: 0; margin: 0 0 28px; flex-grow: 1; }
+    .tier-includes li { color: var(--platinum); font-size: 15px; padding: 6px 0; padding-left: 24px; position: relative; }
+    .tier-includes li::before { content: "✓"; position: absolute; left: 0; color: var(--chrome); font-weight: 700; }
+    .tier-card a { text-decoration: none; display: inline-block; text-align: center; }
+
+    .process-section .section-header { margin-bottom: 8px; }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 40px; }
+    .process-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px;
+    }
+    .process-step .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--border-active);
+      color: var(--chrome);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    .process-step .sub-header { margin: 0 0 8px; font-size: 18px; }
+    .process-step .body { margin: 0; max-width: none; }
+
+    .disclosure-note { color: var(--muted); font-size: 13px; margin-top: 28px; max-width: 680px; }
+
+    .final-cta-section { border-top: 1px solid var(--border); text-align: center; }
+    .final-cta-section .section-header { max-width: 680px; margin: 0 auto; }
+    .final-cta-section .body { margin: 16px auto 0; }
+    .final-cta-section a.btn-primary { text-decoration: none; display: inline-block; margin-top: 28px; }
+
+    .site-footer { border-top: 1px solid var(--border); padding: 56px 0; }
+    .footer-inner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .footer-icon { height: 32px; width: 32px; }
+    .footer-inner .body { margin: 0; color: var(--secondary); font-size: 14px; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html"><img src="images/saleverse-logo-dark-1600x560.png" alt="SalesverseHQ" class="nav-logo"></a>
+      <div class="nav-links">
+        <a href="kit.html">Kit</a>
+        <a href="service.html" class="active">Service</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="container">
+      <p class="label">Done-For-You</p>
+      <h1 class="hero">We build your outbound system.</h1>
+      <p class="body">For when you'd rather not build the pipeline yourself. Same playbook as the kit — we do the research, write the sequences, and set up the tracking, so you're sending (or we're sending) inside days, not weeks.</p>
+      <div class="cta-row">
+        <a href="https://calendly.com/ola-mockthatinterview/30min" class="btn-primary" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tiers-section">
+    <div class="container">
+      <p class="label">Pricing</p>
+      <h2 class="section-header">Two ways to work together.</h2>
+      <p class="body">Build it once, or have it run for you every month. Both start with a call to scope your ICP and offer.</p>
+      <div class="tiers-grid">
+        <div class="tier-card">
+          <h3 class="sub-header">Pipeline Build</h3>
+          <p class="body tier-desc">Your outbound system, built and delivered. You take it from there and send the emails yourself.</p>
+          <div class="tier-price">
+            <span class="price-amount">£750</span>
+          </div>
+          <p class="tier-price-note">One-time delivery</p>
+          <ul class="tier-includes">
+            <li>ICP research &amp; segmentation</li>
+            <li>Target company list, built to your ICP</li>
+            <li>Multi-touch email sequences, written for your offer</li>
+            <li>A CRM set up with your pipeline in it</li>
+            <li>Outreach tracker and the playbook to run it</li>
+            <li>LinkedIn message templates</li>
+            <li>A walkthrough call so you know how to run it</li>
+          </ul>
+          <a href="https://calendly.com/ola-mockthatinterview/30min" class="btn-secondary" target="_blank" rel="noopener">Book a call</a>
+        </div>
+        <div class="tier-card featured">
+          <span class="popular-tag">Most popular</span>
+          <h3 class="sub-header">Pipeline Build + Run</h3>
+          <p class="body tier-desc">Everything in Pipeline Build, plus we run it for you — sending, reply handling, and reporting, every month.</p>
+          <div class="tier-price">
+            <span class="price-amount">£2,500</span>
+            <span class="price-unit">/mo</span>
+          </div>
+          <p class="tier-price-note">Month-to-month · cancel anytime</p>
+          <ul class="tier-includes">
+            <li>Everything in Pipeline Build</li>
+            <li>Fresh target companies sourced every month</li>
+            <li>We send the sequences on your behalf</li>
+            <li>Reply handling and meeting booking</li>
+            <li>Weekly performance reporting</li>
+            <li>Ongoing sequence testing and optimisation</li>
+            <li>Direct line to us for the duration of the engagement</li>
+          </ul>
+          <a href="https://calendly.com/ola-mockthatinterview/30min" class="btn-primary" target="_blank" rel="noopener">Book a call</a>
+        </div>
+      </div>
+      <p class="disclosure-note">Exact deliverable counts (companies targeted, email volume) are scoped to your ICP and offer on the intake call — this page describes what's built, not a fixed quota.</p>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="container">
+      <p class="label">How it works</p>
+      <h2 class="section-header">One call to start. No long onboarding.</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3 class="sub-header">Tell us who you sell to</h3>
+          <p class="body">A short intake call. We learn your product, your market, and what your best customers actually look like.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3 class="sub-header">We build the system</h3>
+          <p class="body">ICP research, company targeting, sequence writing, CRM setup, tracker — the same system behind the £49 kit, built around your offer.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3 class="sub-header">You send it, or we do</h3>
+          <p class="body">Pipeline Build hands you a ready-to-send system. Pipeline Build + Run means we're the ones sending, replying, and reporting back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta-section">
+    <div class="container">
+      <h2 class="section-header">Stop building outbound alone.</h2>
+      <p class="body">30 minutes to scope your ICP and offer — no pitch deck, just a straight conversation about what you're selling and who to.</p>
+      <a href="https://calendly.com/ola-mockthatinterview/30min" class="btn-primary" target="_blank" rel="noopener">Book a call</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="images/saleverse-icon-transparent-512.png" alt="SalesverseHQ icon" class="footer-icon">
+      <p class="body">SalesverseHQ — The unglamorous truth about B2B sales.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

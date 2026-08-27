@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTM Starter Kit — £49 | SalesverseHQ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/saleverse-icon-dark-512.png">
+  <style>
+    /* Page-level layout only — no new colors or fonts, reuses styles.css tokens/classes. */
+    .site-nav { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--secondary); text-decoration: none; font-weight: 600; font-size: 15px; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+
+    .hero-section { padding-top: 80px; padding-bottom: 64px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; align-items: center; }
+    .cta-row a { text-decoration: none; display: inline-block; }
+    .price-line { display: flex; align-items: baseline; gap: 10px; margin-top: 20px; }
+    .price-amount { font-size: 40px; font-weight: 800; letter-spacing: -1px; color: var(--white); }
+    .price-note { color: var(--secondary); font-size: 14px; }
+
+    .contents-section { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
+    .contents-section .section-header { margin-bottom: 8px; }
+    .contents-section .body { margin-top: 8px; }
+    .contents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
+    .contents-card {
+      background: var(--surface-raised);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contents-card .sub-header { margin: 0; }
+    .contents-card .body { margin: 0; max-width: none; }
+
+    .who-section .body { margin-top: 16px; }
+    .who-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .who-list li { color: var(--tertiary); font-size: 15px; padding-left: 20px; position: relative; }
+    .who-list li::before { content: "—"; position: absolute; left: 0; color: var(--secondary); }
+
+    .pricing-section { border-top: 1px solid var(--border); background: var(--surface); text-align: center; }
+    .pricing-card {
+      max-width: 480px;
+      margin: 40px auto 0;
+      background: var(--surface-raised);
+      border: 1px solid var(--border-active);
+      border-radius: 10px;
+      padding: 48px 32px;
+    }
+    .pricing-card .price-amount { font-size: 56px; }
+    .pricing-card .price-note { display: block; margin-top: 6px; }
+    .pricing-includes { list-style: none; padding: 0; margin: 28px 0 32px; text-align: left; display: inline-block; }
+    .pricing-includes li { color: var(--platinum); font-size: 15px; padding: 6px 0; padding-left: 24px; position: relative; }
+    .pricing-includes li::before { content: "✓"; position: absolute; left: 0; color: var(--chrome); font-weight: 700; }
+    .pricing-card a.btn-primary { text-decoration: none; display: inline-block; }
+    .currency-note { color: var(--muted); font-size: 13px; margin-top: 20px; }
+
+    .faq-section .section-header { margin-bottom: 8px; }
+    .faq-list { margin-top: 36px; display: flex; flex-direction: column; gap: 28px; max-width: 680px; }
+    .faq-item .sub-header { margin: 0 0 8px; font-size: 18px; }
+    .faq-item .body { margin: 0; }
+
+    .final-cta-section { border-top: 1px solid var(--border); text-align: center; }
+    .final-cta-section .section-header { max-width: 680px; margin: 0 auto; }
+    .final-cta-section .body { margin: 16px auto 0; }
+    .final-cta-section a.btn-primary { text-decoration: none; display: inline-block; margin-top: 28px; }
+
+    .site-footer { border-top: 1px solid var(--border); padding: 56px 0; }
+    .footer-inner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .footer-icon { height: 32px; width: 32px; }
+    .footer-inner .body { margin: 0; color: var(--secondary); font-size: 14px; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html"><img src="images/saleverse-logo-dark-1600x560.png" alt="SalesverseHQ" class="nav-logo"></a>
+      <div class="nav-links">
+        <a href="kit.html" class="active">Kit</a>
+        <a href="service.html">Service</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="container">
+      <p class="label">GTM Starter Kit</p>
+      <h1 class="hero">The system behind a 104-company outbound pipeline, built from zero.</h1>
+      <p class="body">Not theory, not a course. The exact playbook, sequences, and tracking system used to build a cold outbound pipeline from zero — yours to run today.</p>
+      <div class="price-line">
+        <span class="price-amount">£49</span>
+        <span class="price-note">one-time · instant download</span>
+      </div>
+      <div class="cta-row">
+        <a href="https://selar.com/8s9g604724" class="btn-primary" target="_blank" rel="noopener">Get the Kit — £49</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contents-section">
+    <div class="container">
+      <p class="label">What's inside</p>
+      <h2 class="section-header">Six tools. No filler.</h2>
+      <p class="body">Every file is fill-in-the-blank ready — open it and start using it the same day.</p>
+      <div class="contents-grid">
+        <div class="contents-card">
+          <p class="label">01</p>
+          <h3 class="sub-header">B2B Outbound Playbook</h3>
+          <p class="body">A guide covering ICP segmentation, pain signals, a personalisation approach, voice rules, objection handling, and a 30-day execution plan.</p>
+        </div>
+        <div class="contents-card">
+          <p class="label">02</p>
+          <h3 class="sub-header">5-Touch Email Sequence Templates</h3>
+          <p class="body">Cold open, value proof, angle flip, insight drop, and breakup email — fill-in-the-blank structures you adapt to your own offer.</p>
+        </div>
+        <div class="contents-card">
+          <p class="label">03</p>
+          <h3 class="sub-header">ICP Segmentation Worksheet</h3>
+          <p class="body">A tiered prioritisation framework with scoring criteria, so you target the right companies first instead of guessing.</p>
+        </div>
+        <div class="contents-card">
+          <p class="label">04</p>
+          <h3 class="sub-header">Pipeline CRM</h3>
+          <p class="body">A dark-mode, browser-based tracker for accounts, deal stages, contacts, and notes. No subscription — it's a file you open.</p>
+        </div>
+        <div class="contents-card">
+          <p class="label">05</p>
+          <h3 class="sub-header">Subject Line Rulebook</h3>
+          <p class="body">The rules that get cold emails opened: word count, casing, company-name placement, and formulas by touch.</p>
+        </div>
+        <div class="contents-card">
+          <p class="label">06</p>
+          <h3 class="sub-header">Quick Start Guide</h3>
+          <p class="body">The order to use everything in — so you're sending inside 48 hours, not still reading in week two.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="who-section">
+    <div class="container">
+      <p class="label">Who this is for</p>
+      <h2 class="section-header">Built for people doing the work, not studying it.</h2>
+      <ul class="who-list">
+        <li>Founders running their own sales</li>
+        <li>SDRs building pipeline from scratch</li>
+        <li>Freelancers and consultants doing their own outreach</li>
+        <li>Anyone launching B2B cold email for the first time</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container">
+      <p class="label">Pricing</p>
+      <h2 class="section-header">One price. Everything included.</h2>
+      <div class="pricing-card">
+        <span class="price-amount">£49</span>
+        <span class="price-note">one-time payment</span>
+        <ul class="pricing-includes">
+          <li>Instant download (ZIP file)</li>
+          <li>Lifetime access</li>
+          <li>Free updates</li>
+          <li>All 6 tools, fill-in-the-blank ready</li>
+        </ul>
+        <a href="https://selar.com/8s9g604724" class="btn-primary" target="_blank" rel="noopener">Get the Kit — £49</a>
+      </div>
+      <p class="currency-note">Checkout runs through Selar and adapts to your local currency — ₦85,000 NGN at current pricing.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <p class="label">FAQ</p>
+      <h2 class="section-header">Before you buy</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="sub-header">What format is the kit in?</h3>
+          <p class="body">An instant digital download. The CRM and worksheets are browser-based files — no software to install, no subscription to manage.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="sub-header">Is this a video course?</h3>
+          <p class="body">No. It's the playbook, templates, and tracker themselves — built for people who want to run outbound this week, not sit through lessons first.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="sub-header">Do I need any other tools to use it?</h3>
+          <p class="body">No. The Pipeline CRM and templates run from the files you download — there's nothing else to buy or subscribe to just to use the kit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta-section">
+    <div class="container">
+      <h2 class="section-header">Stop guessing at outbound.</h2>
+      <p class="body">Get the exact system, not another framework to figure out on your own.</p>
+      <a href="https://selar.com/8s9g604724" class="btn-primary" target="_blank" rel="noopener">Get the Kit — £49</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="images/saleverse-icon-transparent-512.png" alt="SalesverseHQ icon" class="footer-icon">
+      <p class="body">SalesverseHQ — The unglamorous truth about B2B sales.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
